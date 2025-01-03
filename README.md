@@ -1,56 +1,70 @@
 # Dog and Cat Sound Classification 🐕 🐱
 
-A deep learning model to classify dog and cat sounds using audio processing.
-
 ## Overview
-
-- Audio classification using deep learning
-- Spectrogram-based feature extraction
-- Real-time prediction capabilities
-- Built with Python and Jupyter Notebook
+A machine learning project that classifies audio sounds between dogs and cats using advanced deep learning techniques.
 
 ## Features
+- Audio feature extraction using Librosa
+- Data augmentation techniques
+- Convolutional Neural Network (CNN) for sound classification
+- Supports various audio file formats (WAV, MP3)
 
-- 🎵 Audio preprocessing and normalization
-- 📊 Spectrogram generation
-- 🤖 Deep learning model implementation
-- ⚡ Real-time predictions
-- 📈 Performance visualization
-
-## Setup
-
-### Requirements
+## Prerequisites
 - Python 3.8+
-- Jupyter Notebook
-- Required libraries: TensorFlow, Librosa, NumPy, Pandas, Matplotlib
+- GPU recommended for training (optional)
 
-### Installation
+## Installation
+
+1. Clone the repository:
 ```bash
-# Clone repository
 git clone https://github.com/mohasbks/dog-cat-sound-classification.git
 cd dog-cat-sound-classification
+```
 
-# Create virtual environment
+2. Create a virtual environment:
+```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
 
-# Install dependencies
+3. Install dependencies:
+```bash
 pip install -r requirements.txt
 ```
 
-### Usage
-Open and run the Jupyter notebook:
+## Dataset Preparation
+- Organize your audio files in two directories:
+  - `dog_sounds/`: Contains dog sound audio files
+  - `cats/`: Contains cat sound audio files
+
+## Usage
 ```bash
-jupyter notebook Dog_Cat_Sound_Classification.ipynb
+python dog_cat_sound_classification.py
 ```
 
 ## Model Architecture
-- CNN-based audio processing
-- Optimized for sound classification
-- Fast inference time
+- 1D Convolutional Neural Network
+- Feature extraction using:
+  - Mel-frequency cepstral coefficients (MFCCs)
+  - Mel Spectrogram
+  - Spectral features
+
+## Performance
+- Supports data augmentation
+- Handles various audio qualities
+- Provides detailed training metrics
+
+## Contributing
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a new Pull Request
 
 ## License
-MIT License
+MIT License - see the LICENSE file for details
 
-## Contact
-For questions or feedback, please open an issue in the GitHub repository.
+## Acknowledgments
+- Librosa for audio processing
+- TensorFlow for deep learning
+- ESC-50 dataset for sound classification
